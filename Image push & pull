@@ -1,0 +1,46 @@
+Note := In mumbai region
+
+    1  yum update -y
+    3  yum install docker -y
+    7  service docker start
+    8  docker run -it ubuntu /bin/bash
+    9  docker images
+   10  docker ps -a
+   11  docker commit (compassionate_lovelace) image1
+   12  docker images
+   13  docker login
+   16  docker tag image1 devroy/project2
+   17  docker push devroy/project2
+
+Note := In tokyo region (public docker image access)
+
+    1  yum update -y
+    2  yum install docker -y
+    3  service docker start
+    4  service docker status
+    5  docker images
+    6  docker pull devroy/project2
+    7  docker images
+    8  docker run -it --name mycontainer devroy/project2 /bin/bash
+   
+
+
+Note:= In tokyo region (make private docker image access)
+
+step-1 Go to hub.docker.com 
+step-2 select your image which your was created 
+Step-3 Go to setting make private or public what you what to select.
+step-4 Go to again tokyo machine:-
+   
+   1  docker login
+   2  enter hub.docker.com (login & password)	
+   2  docker pull devroy/project2
+   3  ls
+   4  docker ps -a
+   5  docker attach mycontainer
+   6  docker images
+   7  docker start  mycontainer
+   9  docker attach  mycontainer
+
+For delete all images commands
+docker rmi -f $(docker images -q)
