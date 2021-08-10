@@ -1,6 +1,6 @@
 Note := In mumbai region
 
-    1  yum update -y
+   1  yum update -y
     3  yum install docker -y
     7  service docker start
     8  docker run -it ubuntu /bin/bash
@@ -8,9 +8,13 @@ Note := In mumbai region
    10  docker ps -a
    11  docker commit (compassionate_lovelace) image1
    12  docker images
-   13  docker login
-   16  docker tag image1 devroy/project2
-   17  docker push devroy/project2
+   13  docker run -it --name roy image1 /bin/bash
+   14  ls
+   15  cd tmp/
+   16  ls
+   17  docker login
+   18  docker tag image1 devroy/project2
+   19  docker push devroy/project2
 
 Note := In tokyo region (public docker image access)
 
